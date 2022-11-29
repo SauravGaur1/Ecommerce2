@@ -1,0 +1,18 @@
+<div id="header" class="header" style="display: flex; align-items:center; justify-content:space-between; height:56px; background-color: #195a6a; cursor: pointer;">
+    <div class="leftLogoPart" style="display: flex; flex: 6; align-items:center; margin-left: 1rem;">
+        <a href="/" style="text-decoration: none; color:white">
+        <img src="images/shoppingLogo.png" alt="LOGO" height="30rem">
+        <span style="margin-left: 1rem; font-weight: 700; color:white">LOGO</span>
+        </a>
+    </div>
+    <div class="rightActions" style="display: flex; flex: 4; justify-content: space-around; align-items:center; color: white;">
+        <a style="text-decoration: none; color:white" href="/profile"><span id="gotoProfile">
+            <% if(user.userimage){ %>
+            <img src= profiles/<%= user.userimage %> style="height: 30px; width:30px; border-radius:15px" alt="LOGO" height="30rem">
+            <% } else{  %>
+            <img src="images/user.png" style="height: 30px; width:30px" alt="LOGO" height="30rem">
+            <% } %> <%=user.username%></span></a>
+        <a href="/cart" style="text-decoration: none; color:white"> <span id="gotoCart"> <img style="height: 30px; width:30px" src="images/trolley.png" alt=""> Cart</span> </a>
+        <a href="/logout" style="text-decoration: none; color:white"> <span id="logout"> <img style="height: 25px; width:30px" src="images/log-out.png" alt=""> Logout</span> </a>
+    </div>
+</div>

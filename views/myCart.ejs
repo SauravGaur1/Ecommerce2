@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+    <link rel="stylesheet" href="mycart/mycart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <%- include('components/header', {user: user}) %>
+
+    <div class="container mb-5">
+        <div class="col mt-5">
+          
+          <% if(list.length != 0){ %>
+ 
+              <% list.forEach(function(item){ %>
+
+                <div id= parent<%= item.productimg %> class="card mb-3" style="max-width: 100%;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img style="max-width: 12rem; height: 100%;" src= <%= item.productimg %> alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title"> <%= item.productname %> </h5>
+                        <p class="card-text"> <%= item.productdescription %> </p>
+                        <p class="card-text"><small class="text-muted">₹<%= item.productprice %></small></p>
+                      </div>
+                    </div>
+                    <div class="actions">
+                      <div class="amountShower">
+                          <span>Total amount : </span>
+                          <span id=totalp<%= item.productimg %> > ₹<%= item.productprice %> </span>
+                      </div>
+                      <div class="controllersContainer">
+                        <span id="<%= item.productimg %>" class="minusButton">-</span>
+                        <span id= quanty<%= item.productimg %> class="noOfItems"><%= item.quantity %></span>
+                        <span id="<%= item.productimg %>" class="addButton">+</span>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+
+              <% }) %>
+
+          <% } else{ %>
+
+                <img src="images/empty_cart.webp" alt="/emptyCart">
+
+          <% } %>
+
+
+        </div>
+    </div>
+
+    <% if(list.length != 0){ %>
+      <div class="bottombar">
+        <div class="right">
+          <img style="height: 28px" src="images/cart.png" alt="">
+          <span id="rzr-pay-1">Proceed To checkout!</span>
+        </div>
+      </div>
+    <% } %>
+
+    <!-- //scripts -->
+
+    <script src="mycart/mycart.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

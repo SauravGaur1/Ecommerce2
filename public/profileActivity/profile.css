@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+.rightSideLoginPageContainer{
+    flex: 50;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    padding: 0 .5rem;
+}
+
+.formContainer{
+    position: relative;
+}
+
+.formContainer form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 2rem;
+   border: 1px solid grey;
+   border-radius: 2px;
+}
+
+form input{
+    margin: .5rem 0;
+    padding: .4rem;
+}
+
+form label{
+    color: gray;
+    width: 100%;
+    text-align: left;
+}
+
+form input:focus{
+    border: 2px solid #f5f8fa;
+    outline: none;
+}
+
+#update{
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: #195a6a;
+    color: white;
+}
+
+#update:hover{
+    background-color: #407fee;
+}
+
+a span:hover{
+    color: #407fee;
+}
+
+
+.additionalLinks a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.additionalLinks{
+    margin-top: 2rem;
+}
+
+#profileImage{
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    top: -15%;
+    left: 32%;
+    border-radius: 3rem;
+    box-shadow: 0 3px 4px;
+}
+
+img{
+    cursor:pointer;
+}

@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    display: flex;
+}
+
+.nav img{
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+#logo{
+    margin-left: 1rem;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #407fee;
+}
+
+.mainContainer{
+    
+    /* background-color: red; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f8fa;
+}
+
+.mainParent{
+    height: 35rem;
+    width: 50rem;
+    display: flex;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: .2rem;
+    margin: 0 .5rem;
+}
+
+.leftCrouselSideContainer{
+    flex: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+
+.leftCrouselSideContainer img{
+    max-width: 15rem;
+}
+
+.rightSideLoginPageContainer{
+    flex: 50;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid grey;
+    padding: 0 .5rem;
+}
+
+
+.formContainer form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: auto;
+}
+
+form input{
+    margin: .5rem 0;
+    padding: .4rem;
+}
+
+form label{
+    color: gray;
+    width: 100%;
+    text-align: left;
+}
+
+form input:focus{
+    border: 2px solid #f5f8fa;
+    outline: none;
+}
+
+#register{
+    padding: .75rem 1rem;
+    outline: none;
+    border: none;
+    background-color: #195a6a;
+    color: white;
+}
+
+#register:hover{
+    background-color: #407fee;
+}
+
+a span:hover{
+    color: #407fee;
+}
+
+
+.additionalLinks a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.additionalLinks{
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    /* .leftCrouselSideContainer{
+        display: none;
+        flex: 0;
+    }
+    .rightSideLoginPageContainer{
+        flex: 100;
+    } */
+    .mainParent{
+        width: 25rem;
+    }
+    .leftCrouselSideContainer img{
+        max-width: 10rem;
+    }
+}

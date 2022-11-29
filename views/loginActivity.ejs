@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loginActivity/loginCss.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="nav">
+            <img src="images/shoppingLogo.png" alt="logo">
+            <span id="logo" >E-commerce</span>
+        </div>
+        <div class="mainParent">
+            <div class="leftCrouselSideContainer">
+                <img src="images/bgImg.jpeg" alt="">
+            </div>
+            <div class="rightSideLoginPageContainer">
+                <div class="formContainer">
+                    <div class="">
+                        <h3 style="font-weight: bold;"><%= message %></h3>
+                    </div>
+                    <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+                        <label for="username">username</label>
+                        <input type="text" name="username" placeholder="Username" required>
+                        <label for="password">password</label>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" value="Login" id="login">
+                    </form>
+                </div>
+                <div class="additionalLinks">
+                    <a href="/signup">Don't have an account? <span style="color: #195a6a;"> Join now ! </span> </a>
+                    <a href="/contactus">Need help? <span style="color: #195a6a;"> Contact Us! </span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

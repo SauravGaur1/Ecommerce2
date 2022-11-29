@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/signupActivity/signupCss.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="nav">
+            <img src="images/shoppingLogo.png" alt="logo">
+            <span id="logo" >E-commerce</span>
+        </div>
+        <div class="mainParent">
+            <div class="leftCrouselSideContainer">
+                <img src="images/bgImg.jpeg" alt="">
+            </div>
+            <div class="rightSideLoginPageContainer">
+                <div class="formContainer">
+                    <div class="">
+                        <h3 id="indicator" style="font-weight: bold;"> <%= message %> </h3>
+                    </div>
+                    <form action="/signup" method="post">
+                        <label for="username">username</label>
+                        <input type="text" name="username" placeholder="Username" required>
+                        <label for="password">password</label>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <label for="usermail">e-mail</label>
+                        <input type="email" name="usermail" id="usermail" placeholder="e-mail address" required>
+                        <input type="submit" value="Register" id="register">
+                    </form>
+                </div>
+                <div class="additionalLinks">
+                    <a href="/login">Already have an account? <span style="color: #195a6a;"> Login ! </span> </a>
+                    <a href="/contactus">Need help? <span style="color: #195a6a;"> Contact Us! </span> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

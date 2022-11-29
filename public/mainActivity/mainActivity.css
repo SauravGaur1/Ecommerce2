@@ -1,0 +1,110 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.mainCont{
+    margin: 0 2rem;
+}
+
+#next{
+    background-color: #195a6a;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    outline: none;
+    border: 1px solid #407fee;
+    color: white;
+    border-radius: 100rem;
+    padding: 1rem;
+}
+
+#next:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.card{
+    cursor: pointer;
+    align-items: center;
+}
+
+#dialogBox{
+    height: 75vh;
+    width: 80% ;
+    position: fixed;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    box-shadow: 10px 10px 100px;
+    border-radius: 20px;
+    /* left: 50%; */
+}
+
+#dialogBox .card{
+    max-height: -webkit-fill-available;
+    overflow-y: scroll;
+}
+
+
+.closeCont{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+#closeDialog{
+    height: 25px;
+}
+
+/* .card:hover{
+    padding: 10px;
+    transition: 1s;
+} */
+
+.viewDetails{
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #195a6a;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+.viewDetails:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #195a6a;
+}
+
+.footer-card {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    height: auto;
+    padding: 1rem;
+}
+
+.loadContainer{
+    text-align: right;
+    padding: 1rem;
+}
